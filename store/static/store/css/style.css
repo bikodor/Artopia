@@ -1,0 +1,319 @@
+
+body {
+    background-color: rgb(255, 239, 218);
+    font-family: 'Alegreya', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+nav {
+    background-color: rgb(255, 255, 255); 
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding-left: 10%;
+    font-size: 40px;
+    border-bottom: solid black;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    float: left;
+}
+
+
+nav ul li a {
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: rgb(255, 239, 218);
+}
+.advertising img {
+    margin: 10px;
+    margin-inline: 30px;
+
+    width: 60%; 
+    height: auto; 
+    object-fit: cover;
+    text-align: center;
+  }
+.content {
+    padding-top: 50px;
+
+    display: grid;
+    grid-template-columns: 1fr 3.7fr 0.3fr;
+}
+.column {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.list {
+    padding-top: 30px;
+    margin-left: 15px;
+    
+}
+a {
+    text-decoration: none;
+    color: black;
+
+}
+.title {
+    font-size: 20px;
+    color: black;
+}
+.price {
+    font-size: 20px;
+    color: black;
+
+}
+.home {
+    display: flex;
+    align-items: center;
+}
+.search {
+    display: flex;
+    align-items: center;
+
+    margin-left: 10%;
+
+}
+.btn.search {
+    display: flex;
+    margin-left: 0;
+}
+input {
+    border: solid blue;
+    border-radius: 20px;
+    height: 50px;
+    font-size: 20px;
+
+
+}
+
+.basket {
+    float: right;
+    margin-right: 15%;
+}
+.num-basket {
+    display: none;
+    color: white;
+    background-color: red;
+    border-radius: 20px;
+    padding: 10px;
+    padding-inline: 15px;
+    font-size: 16px;
+}
+.menu {
+    padding-top: 100px;
+
+    position: fixed;
+    top: 0; 
+    width: 20%;
+    height: 100%; 
+    background-color: rgb(255, 255, 255); 
+    text-align: end;
+  }
+.text-menu {
+    font-size: 25px;
+    margin-right: 20%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+.card {
+    margin-top: 20px;
+    background-color: aliceblue;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.text-card {
+    padding: 20px;
+}
+.card-image {
+    flex-grow: 1;
+    overflow: hidden; 
+}
+.card-image img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover;
+  }
+
+.button-buy {
+    display: flex;
+    background-color: rgb(5, 211, 26);
+    border-radius: 20px;
+    width: 100px;
+    height: 50px;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    align-items: center;
+
+}
+
+/* .button-show {
+    background-color: rgb(6, 175, 243);
+    border-radius: 20px;
+    width: 40%;
+    margin-left: 10%;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    
+
+}
+.button-show:hover {
+    background-color: rgb(10, 77, 212);
+    color: azure;
+
+} */
+
+.button-buy:hover {
+    background-color: rgb(17, 148, 26);
+    color: azure;
+}
+form .submit-buy {
+    display: flex;
+    background-color: rgb(5, 211, 26);
+    border-radius: 20px;
+    width: 150px;
+    height: 50px;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    align-items: center;
+    margin-top: 20px;
+}
+
+form .submit-buy:hover {
+    background-color: rgb(17, 148, 26);
+    color: azure;
+}
+.card:hover {
+    background-color: rgb(222, 222, 222);
+}
+.product {
+    padding-top: 60px;
+    padding-left: 15px;
+}
+.product img {
+    width: 40%;
+    border: solid black;
+    border-width: 5px;
+    border-radius: 20px;
+    vertical-align: middle;
+    height: 50%;
+}
+.product p {
+    font-size: 30px;
+    vertical-align: middle;
+}
+.product.basket p {
+    display: inline;
+}
+.product.basket img {
+    display: inline;
+
+    width: 20%;
+    border: none;
+}
+
+.btn-cancel {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0; /* Убедитесь, что внешние отступы также сброшены */
+    cursor: pointer;
+    display: inline-block; /* Позволяет кнопке быть по размеру содержимого */
+    outline: none; /* Внимание: убирать с осторожностью из соображений доступности */
+    width: 150px;
+  }
+  
+.btn-cancel img {
+    display: block; /* Убирает лишнее пространство под изображением */
+  width: auto; /* Или можно задать конкретный размер */
+  height: auto; /* Или можно задать конкретный размер */
+  }
+
+.pack {
+    margin-top: 20px;
+}
+ /* @media (max-width: 1745px) {
+    .button-buy {
+        font-size: 20px;
+    }
+    .button-show {
+        font-size: 20px;
+    }
+}
+@media (max-width: 1500px) {
+    .button-buy {
+        font-size: 16px;
+    }
+    .button-show {
+        font-size: 16px;
+    }
+} */
+@media (max-width: 1680px) {
+    .column {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media (min-width: 481px) and (max-width: 1024px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+    .menu {
+        display: none;
+    }
+    .column {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .search {
+        display: none;
+    }
+
+
+    .product img {
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+    .menu {
+        display: none;
+    }
+    .column {
+        grid-template-columns: 1fr;
+    }
+
+    .search {
+        display: none;
+    }
+
+
+
+    .product img {
+        width: 90%;
+    }
+}
+
+
