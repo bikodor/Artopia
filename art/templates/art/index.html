@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load nav_active_tag %}
+
+{% block content %}
+
+<div class="content">
+        <div class="column">
+
+        </div>
+        <div class="content-text">
+            <h1 class="animation" style="text-align: center; margin-bottom: 0;">{{ title }}</h1>
+            {% for post in posts %}
+                {% if post.photo %}
+                <div class="post">
+                    {% if post.type == 'bot' %}
+                    <div class="left">
+                        <img src="{{ post.photo.url }}" class="avatar">
+                    </div>
+
+                    {% else %}
+                <img src="{{ post.photo.url }}" class="post-img" onclick="openFullscreen(this)">
+                {% endif %}
+
+                </div>
+                {% endif %}
+            <div id="modal" class="modal">
+            <span class="close" onclick="closeFullscreen()">&times;</span>
+                <img id="modal-content">
+                </div>
+
+
+
+                <h2 class="animation" style="margin-top: 0;">{{ post.title }}</h2>
+
+                <p class="animation">{{ post.description }}
+                    {% if post.file %}
+                    <br><a href="{{ post.file.url }}" download="{{ post.filename }}">
+  <button class="download-button">Download</button>
+</a>
+                {% endif %}
+                </p>
+                {% if post.href %}
+                {% if post.code %}
+                {% else %}
+                <button type="button" class="link" onclick="window.open('{{ post.href }}', '_blank')">Go</button>
+                {% endif %}
+                    {% endif %}
+                {% if post.code %}
+                <p class="animation">Leetcode account: </p>
+                <span>
+                    <button type="button" class="link" onclick="window.open('{{ post.code }}', '_blank')">Go</button>
+                </span>
+                <p class="animation">Solved easy problems: {{ post.easy_tasks_leetcode }}</p>
+                <p class="animation">Solved average problems: {{ post.medium_tasks_leetcode }}</p>
+                <p class="animation">Solved complex problems: {{ post.hard_tasks_leetcode }}</p>
+                <p class="animation">Link to GitHub repository:</p>
+                <button type="button" class="link" onclick="window.open('{{ post.href }}', '_blank')">Go</button>
+
+                    {% endif %}
+
+
+
+            {% endfor %}
+        </div>
+
+
+
+        <div class="column">
+
+        </div>
+
+</div>
+{% endblock %}
